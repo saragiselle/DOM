@@ -4,12 +4,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 250px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
       <section>
         <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
         <p>Here we will add a link to the <a href="https://www.mozilla.org/">Mozilla homepage</a></p>
       </section>
+      
   </body>
   <script>
     const link = document.querySelector("a");
@@ -22,10 +32,7 @@
     const linkPara = document.querySelector("p");
     const text = document.createTextNode(" - the premier source for web development knowledge.")
     linkPara.appendChild(text);
-    para.style.color = "white";
-    para.style.backgroundColor = "black";
-    para.style.padding = "10px";
-    para.style.width = "250px";
-    para.style.textAlign = "center";
+    para.setAttribute("class", "highlight");
+
   </script>
 </html>
